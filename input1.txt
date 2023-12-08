@@ -1,7 +1,3 @@
-import re
-calibration_value = 0
-
-text = '''
 9vxfg
 19qdlpmdrxone7sevennine
 1dzntwofour9nineffck
@@ -1002,12 +998,3 @@ rdkfxsix4tnmndhnxnv86
 two4dddpmrhh7fourthreeeight9
 slhdsxngfxszspppxxfftmxlptzhtwovp1
 4vmzcrhtdvnm6zfive5pkbhcxj
-'''
-split_text = text.split('\n')
-for line in split_text:
-    numbers = re.findall(r'\d+', line)
-    numbers = list(map(int, numbers))
-    sum_in_line = sum(numbers)
-    calibration_value += sum_in_line
-    
-print(calibration_value)
